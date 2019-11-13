@@ -12,7 +12,7 @@ class RecipeSearcher extends Component {
 
     componentDidMount() {
         //this.getRandomRecipe();
-        this.getRecipeByLetter('C');
+        this.getRandomRecipe();
         //this.getRecipeByLetter('M');
     }
 
@@ -75,11 +75,13 @@ class RecipeSearcher extends Component {
 
     render() {
 
-        this.getRecipeByLetter('C');
-
         return (
             <div>
-                <Header />
+                <Header 
+                    randomRecipeHandler={this.getRandomRecipe}
+                    recipeByLetterHandler={this.getRecipeByLetter}
+                    recipeByNameHandler={this.getRecipeByName}
+                />
                 <RecipeList recipes={this.state.recipes} />
             </div>
         );
