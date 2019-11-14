@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './header.css';
 
 class Header extends Component { 
 
@@ -18,6 +19,7 @@ class Header extends Component {
     handleSubmit(event) {
         event.preventDefault();
         this.props.recipeByNameHandler(this.state.textFieldValue);
+        this.setState({ textFieldValue: '' });
     }
 
     generateLetterButtons() {
@@ -36,11 +38,11 @@ class Header extends Component {
                 {this.generateLetterButtons()}
                 <p>Get recipe by Keyword</p>
                 <form onSubmit={this.handleSubmit}> 
-                    <input type='text' value={this.state.textFieldValue} onChange={this.handleChange} />
-                    <input type='submit' value='Submit' />
+                    <input className="textBar" type='text' value={this.state.textFieldValue} onChange={this.handleChange} />
+                    <input className="submitButton" type='submit' value='Submit' />
                 </form>
                 <p>Get Random Recipe</p>
-                <button onClick={() => this.props.randomRecipeHandler()}>Submit</button>
+                <button  onClick={() => this.props.randomRecipeHandler()}>Submit</button>
             </div>
         
         );

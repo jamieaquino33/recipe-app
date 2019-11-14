@@ -1,0 +1,50 @@
+h1 {
+
+    color: turquoise;
+    font-weight: bold;
+    font-size: 30pt;
+}
+
+button {
+    color: turquoise;
+    background-color: black;
+    padding: 10px;
+    margin: 1pt;
+    border-radius: 15%;
+    transition: all .3s;
+    
+}
+
+button:hover {
+    color: black;
+    background-color: turquoise;
+}
+
+div {
+    color: rgb(75, 3, 75);
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.submitButton {
+    color: turquoise;
+    background-color: black;
+    padding: 10px;
+    margin: 1pt;
+    border-radius: 15%;
+}
+
+.submitButton:hover {
+    color: black;
+    background-color: turquoise;
+    transition: all .3s;
+}
+
+.textBar {
+    margin: 3pt;
+    padding: 5px;
+    color: turquoise;
+    font-weight: bold;
+    border-color: black;
+    border-radius: 10%;
+}
